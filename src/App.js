@@ -1,11 +1,10 @@
-import './App.css';
+import './css/App.css';
 import {
   Routes,
   Route
 } from "react-router-dom";
 import Main from "./Main";
 import CardDisplay from "./CardDisplay";
-import Projects from "./Projects";
 import About from "./About";
 
 function App() {
