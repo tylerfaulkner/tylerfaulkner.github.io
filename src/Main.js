@@ -1,5 +1,5 @@
 import React from 'react';
-import './main.css';
+import './css/main.css';
 import me from './images/me.jpg';
 import {
     Link
@@ -8,7 +8,7 @@ import {
 class Main extends React.Component {
     render(){
         return(
-            <div id="Center">
+            <div className="Center">
                 <img src={me} alt="Self Portait"/>
                     <h1><span>Tyler Faulkner</span></h1>
                     <div>

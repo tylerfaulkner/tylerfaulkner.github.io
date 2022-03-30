@@ -1,5 +1,6 @@
 import React from 'react';
 import sanityClient from "./client.js";
+import temp from "./images/temp.png";
 
 class CardDisplay extends React.Component{
     constructor(props) {
@@ -23,29 +24,35 @@ class CardDisplay extends React.Component{
     }
 
     setData(data){
-        console.log(data);
         this.setState({data:data})
     }
 
     render() {
         let genImg = (post) =>{
+            let img = temp;
             if (post.mainImage != null) {
-                return <img className="card-img-top" src={post.mainImage.asset.url} alt="Card cap"/>
+                img = post.mainImage.asset.url;
             }
+            return <img className="card-img-top" src={img} alt="Card cap"/>
         }
         return(
-            <div className={"card-deck mt-1 d-flex justify-content-center"}>
-                {this.state.data &&
-                this.state.data.map((post, index) =>(
-                    <div className="card h-25" style={{width: 25+ "rem"}} key={post.slug.current}>
-                        {genImg(post)}
-                        <div className="card-body">
-                            <h5 className="card-title">{post.title}</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href={"/"+post.slug.current} className="btn btn-primary">Read</a>
+            <div className={"container mt-4 fade"}>
+                <h1>{this.props.type}</h1>
+                <div className="row row-cols-md-3 g-4 justify-content-center">
+                    {this.state.data &&
+                    this.state.data.map((post, index) =>(
+                        <div className={"col"} key={post.slug.current}>
+                            <div className="card">
+                                {genImg(post)}
+                                <div className="card-body">
+                                    <h5 className="card-title">{post.title}</h5>
+                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href={"/"+post.slug.current} className="btn btn-primary">Read</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         );
     }
