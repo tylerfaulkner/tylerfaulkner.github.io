@@ -4,13 +4,13 @@ import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
-    BrowserRouter
+    HashRouter
 } from "react-router-dom";
 
 ReactDOM.render(
-    <BrowserRouter>
+    <HashRouter>
         <App />
-    </BrowserRouter>, document.getElementById('root')
+    </HashRouter>, document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
