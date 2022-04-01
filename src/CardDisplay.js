@@ -1,6 +1,9 @@
 import React from 'react';
 import sanityClient from "./client.js";
 import temp from "./images/temp.png";
+import {
+    Link
+} from "react-router-dom";
 
 class CardDisplay extends React.Component{
     constructor(props) {
@@ -47,7 +50,7 @@ class CardDisplay extends React.Component{
                                 <div className="card-body">
                                     <h5 className="card-title">{post.title}</h5>
                                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href={"/"+post.slug.current} className="btn btn-primary">Read</a>
+                                    <a href={"#/"+post.slug.current} className="btn btn-primary">Read</a>
                                 </div>
                             </div>
                         </div>
