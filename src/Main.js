@@ -9,12 +9,12 @@ class Main extends React.Component {
     render(){
         return(
             <div className="Center">
-                <img src={me} alt="Self Portait"/>
+                <img className={"main-img"} src={me} alt="Self Portait"/>
                     <h1><span>Tyler Faulkner</span></h1>
                     <div>
-                        <Link to="/posts">Posts</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/about">About</Link>
+                        <Link className={'main-a'} to="/posts">Posts</Link>
+                        <Link className={'main-a'} to="/projects">Projects</Link>
+                        <Link className={'main-a'} to="/about">About</Link>
                     </div>
             </div>
         );

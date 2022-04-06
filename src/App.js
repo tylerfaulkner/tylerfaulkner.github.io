@@ -1,7 +1,7 @@
 import './css/App.css';
 import {
     Routes,
-    Route, HashRouter, MemoryRouter
+    Route
 } from "react-router-dom";
 import Main from "./Main";
 import CardDisplay from "./CardDisplay";

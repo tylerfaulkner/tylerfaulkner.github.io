@@ -5,9 +5,16 @@ class About extends React.Component {
     render() {
         return (
             <div className="Center-about">
-                    My Name is Tyler Faulkner and I programmer.
-                    I am pursuing a Bachelor's Computer Science with a minor in Mathematics at the Milwaukee School of Engineering.
-                    This is my personal website to showcase my projects and personal posts about the world of coding.
+                <p>
+                    My Name is Tyler Faulkner and I am a programmer.
+                    I am pursuing a Bachelor's of Computer Science with a minor in Mathematics at the Milwaukee School of Engineering.
+                    This is my personal website to showcase my projects and personal posts about my experience in code.
+                </p>
+                <br></br>
+                <p>
+                    This website was created 100% by me using the Javascript React Framework.
+                    I also used Sanity IO to host the database for all article for my projects and posts.
+                </p>
             </div>
         );
     }
