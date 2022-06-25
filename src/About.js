@@ -13,7 +13,7 @@ class About extends React.Component {
                 <br></br>
                 <p>
                     This website was created 100% by me using the Javascript React Framework.
-                    I also used Sanity IO to host the database for all article for my projects and posts.
+                    I used Sanity IO to host the database for the articles for my projects and posts.
                 </p>
             </div>
         );
